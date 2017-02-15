@@ -20,5 +20,7 @@
 
     <cache alias="com.meepo.app.domain.User.persistentTokens" uses-template="simple"/>
 
+    <cache alias="com.meepo.app.domain.Sys_jgxx" uses-template="simple"/>
+
     <!-- jhipster-needle-ehcache-add-entry -->
 </config>

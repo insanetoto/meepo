@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRouteSnapshot, NavigationEnd, RoutesRecognized } from '@angular/router';
 
 import { JhiLanguageHelper, StateStorageService } from '../../shared';
+import { JhiLanguageService } from 'ng-jhipster';
 
 @Component({
     selector: 'jhi-main',
@@ -13,7 +14,10 @@ export class JhiMainComponent implements OnInit {
         private jhiLanguageHelper: JhiLanguageHelper,
         private router: Router,
         private $storageService: StateStorageService,
-    ) {}
+        private languageService: JhiLanguageService,
+    ) {
+        this.languageService.setLocations(['home']);
+    }
 
     private getPageTitle(routeSnapshot: ActivatedRouteSnapshot) {
         let title: string = (routeSnapshot.data && routeSnapshot.data['pageTitle']) ? routeSnapshot.data['pageTitle'] : 'meepoApp';

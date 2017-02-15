@@ -16,6 +16,7 @@
                     <span class="hidden-sm-down" jhiTranslate="global.menu.home">Home</span>
                 </a>
             </li>
+
             <!-- jhipster-needle-add-element-to-menu - JHipster will add new menu items here -->
             <li *ngSwitchCase="true" ngbDropdown class="nav-item dropdown pointer">
                 <a class="nav-link dropdown-toggle" routerLinkActive="active" ngbDropdownToggle href="javascript:void(0);" id="entity-menu">
@@ -28,9 +29,38 @@
                     </span>
                 </a>
                 <ul class="dropdown-menu" ngbDropdownMenu>
+                    <li uiSrefActive="active">
+                        <a class="dropdown-item" routerLink="sys-jgxx" (click)="collapseNavbar()">
+                            <i class="fa fa-fw fa-asterisk" aria-hidden="true"></i>
+                            <span jhiTranslate="global.menu.entities.sysJgxx">Sys Jgxx</span>
+                        </a>
+                    </li>
                     <!-- jhipster-needle-add-entity-to-menu - JHipster will add entities to the menu here -->
                 </ul>
             </li>
+
+            <!-- 新增系统管理功能菜单 -->
+            <li *ngSwitchCase="true" ngbDropdown class="nav-item dropdown pointer">
+                <a class="nav-link dropdown-toggle" routerLinkActive="active" ngbDropdownToggle href="javascript:void(0);" >
+                    <span>
+                        <i class="fa fa-th-list" aria-hidden="true"></i>
+                        <span class="hidden-sm-down" >
+                            系统管理
+                        </span>
+                        <b class="caret"></b>
+                    </span>
+                </a>
+                <ul class="dropdown-menu" ngbDropdownMenu>
+                    <li uiSrefActive="active">
+                        <a class="dropdown-item" routerLink="" (click)="collapseNavbar()">
+                            <i class="fa fa-fw fa-asterisk" aria-hidden="true"></i>
+                            <span >机构管理</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+
             <li *ngSwitchCase="true" jhiHasAuthority="ROLE_ADMIN" ngbDropdown class="nav-item dropdown pointer">
                 <a class="nav-link dropdown-toggle" ngbDropdownToggle href="javascript:void(0);" id="admin-menu">
                     <span>

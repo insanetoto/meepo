@@ -1,0 +1,51 @@
+
+
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;</button>
+        <h4 class="modal-title" id="mySys_jgxxLabel" jhiTranslate="meepoApp.sys_jgxx.home.createOrEditLabel">Create or edit a Sys Jgxx</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!sys_jgxx.id">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   [(ngModel)]="sys_jgxx.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="meepoApp.sys_jgxx.jgbm" for="field_jgbm">Jgbm</label>
+            <input type="text" class="form-control" name="jgbm" id="field_jgbm"
+                [(ngModel)]="sys_jgxx.jgbm"
+            maxlength="6" />
+            <div [hidden]="!(editForm.controls.jgbm?.dirty && editForm.controls.jgbm?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.jgbm?.errors?.maxlength" jhiTranslate="entity.validation.maxlength" translateValues="{ max: 6 }">
+                   This field cannot be longer than 6 characters.
+                </small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="meepoApp.sys_jgxx.jgmc" for="field_jgmc">Jgmc</label>
+            <input type="text" class="form-control" name="jgmc" id="field_jgmc"
+                [(ngModel)]="sys_jgxx.jgmc"
+            maxlength="60" />
+            <div [hidden]="!(editForm.controls.jgmc?.dirty && editForm.controls.jgmc?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.jgmc?.errors?.maxlength" jhiTranslate="entity.validation.maxlength" translateValues="{ max: 60 }">
+                   This field cannot be longer than 60 characters.
+                </small>
+            </div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

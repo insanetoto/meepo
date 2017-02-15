@@ -1,0 +1,23 @@
+{
+    "meepoApp": {
+        "sys_jgxx" : {
+            "home": {
+                "title": "Sys Jgxxes",
+                "createLabel": "Create a new Sys Jgxx",
+                "createOrEditLabel": "Create or edit a Sys Jgxx",
+                "search": "Search for Sys Jgxx"
+            },
+            "created": "A new Sys Jgxx is created with identifier {{ param }}",
+            "updated": "A Sys Jgxx is updated with identifier {{ param }}",
+            "deleted": "A Sys Jgxx is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Sys Jgxx {{ id }}?"
+            },
+            "detail": {
+                "title": "Sys Jgxx"
+            },
+            "jgbm": "Jgbm",
+            "jgmc": "Jgmc"
+        }
+    }
+}

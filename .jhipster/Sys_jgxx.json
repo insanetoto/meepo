@@ -1,0 +1,27 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "jgbm",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "6"
+        },
+        {
+            "fieldName": "jgmc",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "60"
+        }
+    ],
+    "changelogDate": "20170213093635",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "sys_jgxx",
+    "pagination": "pagination"
+}

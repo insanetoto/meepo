@@ -15,6 +15,10 @@ import { HomeComponent } from './home';
 import { customHttpProvider } from './blocks/interceptor/http.provider';
 import { PaginationConfig } from './blocks/config/uib-pagination.config';
 
+
+// 自定义模块
+import { MeepoOrganizationModule } from './organization/organization.module'
+
 import {
     JhiMainComponent,
     NavbarComponent,

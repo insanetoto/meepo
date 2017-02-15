@@ -79,7 +79,6 @@ export class HomeComponent implements OnInit {
     }
 
     loginMain () {
-        console.log(this.username);
         this.loginService.login({
             username: this.username,
             password: this.password,

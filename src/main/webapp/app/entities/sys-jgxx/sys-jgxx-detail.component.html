@@ -1,0 +1,29 @@
+
+<div *ngIf="sys_jgxx">
+    <h2><span jhiTranslate="meepoApp.sys_jgxx.detail.title">Sys Jgxx</span> {{sys_jgxx.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row">
+        <dt><span jhiTranslate="meepoApp.sys_jgxx.jgbm">Jgbm</span></dt>
+        <dd>
+            <span>{{sys_jgxx.jgbm}}</span>
+        </dd>
+        <dt><span jhiTranslate="meepoApp.sys_jgxx.jgmc">Jgmc</span></dt>
+        <dd>
+            <span>{{sys_jgxx.jgmc}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'sys-jgxx/'+ sys_jgxx.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>
